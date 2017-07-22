@@ -18,6 +18,11 @@ body {
 	position: absolute;
 	left: 100px;
 }
+#raunch-connect {
+	position: absolute;
+	left: 100px;
+	top: 40px
+}
 .device-connected {
 	background-color: green;
 }

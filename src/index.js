@@ -137,7 +137,10 @@ raunchController.onFinishedMove = () => {
     raunchController.move(isIn ? 0 : distance, rate);
 };
 raunchController.onConnected = () => console.log('connected');
-raunchController.connect();
+
+document.getElementById('raunch-connect').addEventListener('click', function () {
+    raunchController.connect();
+});
 
 var x = 0;
 var lastUpdate = 0;
