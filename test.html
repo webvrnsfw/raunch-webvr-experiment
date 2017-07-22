@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title></title>
+        <style>
+            .bar { 
+                width: 400px; 
+                height: 100px;
+                border: 1px solid black;
+                position: absolute;
+                top: 435px;
+                left: 455px;
+                transform: rotate(45deg);
+            }
+            #ind { 
+                width: 2px; 
+                position: relative;
+                height: 100px;
+                background: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bar">
+            <div id="ind"></div>
+        </div>
+        <script src="node_modules/raunch/dist/raunch-webbluetooth.js"></script>
+        <script>
+            var launch = new Launch();
+            launch.onConnected = () => { console.log('connected'); };
+            launch.connect();
+
+            var lastTime = 0;
+            function animate(timestamp) {
+                delta = timestamp - lastTime;
+                launch.update(delta);
+                ind.style.left = (launch.currentPosition * 400) + 'px';
+                lastTime = timestamp;
+                window.requestAnimationFrame(animate);
+            }
+            window.requestAnimationFrame(animate);
+        </script>
+    </body>
+</html>

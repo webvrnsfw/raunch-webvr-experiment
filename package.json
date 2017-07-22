@@ -1,0 +1,21 @@
+{
+  "name": "raunch-webvr-experiment",
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "raunch": "0.0.5",
+    "three": "^0.84.0",
+    "webvr-polyfill": "^0.9.34",
+    "webvr-ui": "^0.9.4"
+  },
+  "devDependencies": {
+    "rollup": "^0.45.2",
+    "rollup-plugin-commonjs": "^8.0.2",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-uglify": "^2.0.1",
+    "uglify-es": "^3.0.25"
+  }
+}
